@@ -26,6 +26,8 @@ class Options
 
     @options = _.defaults defaults, options
 
+    @options.options = options.options
+    
     unless @options.templatePath?
       @options.templatePath = @templatePath @options.template
     @options.inputPath = @convertPath @options.inputPath unless @options.inputBody?
